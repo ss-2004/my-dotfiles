@@ -10,28 +10,73 @@ alias gs="git status"
 alias gpo="git push origin"
 
 alias tdr="time dotnet run"
+alias flt="time flutter run -d"
+alias fc="flutter create --platforms=macos . "
 
-alias ccc="cd ShellScripts; ./cp.sh;"
-alias cse="cd ShellScripts; ./cse.sh;"
+alias 1337="cd desktop/cse/CP/1337; code . Solution.java"
+alias jclc="javac Solution.java"
+alias jlc="java Solution"
+alias clc="clang++ solution.cpp -o s"
+alias slc="./s"
+
+alias ccc="cd desktop/cse/CP/Chef; code . codechef.cpp"
 alias chf="clang++ codechef.cpp -o c"
 alias ch="./c"
-alias cpp="time clang++ cppractice.c -o p"
 alias jchf="javac Codechef.java"
-alias jc="java Codechef"
+alias jch="java Codechef"
+
+alias clg="clang"
+alias cpp="clang++"
+alias jc="javac"
+alias j="java"
+alias mg="mongo"
+alias mgd="mongod"
+alias mgsh="mongosh"
+alias mgim="mongoimport"
+
 alias ds="time clang++ ds.cpp -o d"
 alias d="time ./d"
 alias alg="time clang++ alg.cpp -o a"
 alias a="time ./a"
 
+alias cse="cd desktop/cse"
+alias asg="cd desktop/cse/ASSGN"
+alias plt="gnuplot"
+alias prl="time parallel <"
+alias act="open -a activity\ monitor"
+alias spot="open -a spotify"
+
+alias auto="cd;cd desktop/cse;java -jar JFLAP7.1.jar"
+alias mips="cd;cd desktop/cse;java -jar MIPSemu.jar"
+alias 8086="cd;cd desktop/cse;java -jar emu8086.jar"
+#alias clion="open -a '/Applications/CLion Early Access Program.app/'"
+
+alias fu="flutter upgrade"
+alias fd="flutter doctor"
 alias bu="brew upgrade"
+alias zu="omz update"
 
 alias plog="sudo powermetrics -n 12 -i 5000 > powerlog.txt"
 alias show="open powerlog.txt -a "textedit""
 alias gtp="gotop"
 alias atp="sudo asitop"
 alias nano="/opt/homebrew/bin/nano"
+alias net="networkQuality -v"
+alias anm="ani-cli"
 
+alias k="pkill "
+alias c="clear"
 alias r="reset"
+alias x="chmod +x"
+alias nx="chmod -x"
+alias w="chmod +w"
+alias nw="chmod -w"
+alias sc="shellcheck"
+alias finddir="find ~/Desktop -type d -name"
+alias findfile="find ~/Desktop -type f -name"
+
+alias hud1="/bin/launchctl setenv MTL_HUD_ENABLED 1"
+alias hud0="/bin/launchctl setenv MTL_HUD_ENABLED 0"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -40,7 +85,7 @@ export ZSH="$HOME/.oh-my-zsh"
 TIMEFMT=$'\n\n%J\n-------------------------\nusr : %U\nsys : %S\ncpu : %P\ntot : %*E\n-------------------------'
 
 # shell prompt
-#PS1="%{$FG[010]%} ➜ %{$FG[034]%}%~ %{$fg[white]%}% $ "
+# PROMPT='%F{green}%n%f:~$'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -73,7 +118,7 @@ ZSH_THEME="githublite"
 # DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
- DISABLE_LS_COLORS="true"
+ DISABLE_LS_COLORS="false"
 
 # Uncomment the following line to disable auto-setting terminal title.
  DISABLE_AUTO_TITLE="true"
@@ -85,7 +130,7 @@ ZSH_THEME="githublite"
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+ COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -138,4 +183,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export PATH="$PATH:$HOME/Developer/flutter/bin"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# eval "$(starship init zsh)"
+
